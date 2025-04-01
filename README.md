@@ -1,5 +1,5 @@
-# **Vc Topic Custom Field** Plugin
+# **VC Topic Custom Field** Plugin
 
 **Plugin Summary**
 
-For more information, please see: **url to meta topic**
+A plugin to add and display custom field inside topic composer for VC community with ease.

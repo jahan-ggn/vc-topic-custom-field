@@ -1,4 +1,17 @@
-vc_topic_custom_field:
-  vc_topic_custom_field_enabled:
-    default: false
+plugins:
+  VC_topic_custom_field_enabled:
+    default: true
     client: true
+  VC_topic_custom_field_name:
+    default: 'deal_status'
+    client: true
+  VC_topic_custom_field_type:
+    default: 'select'
+    client: true
+    type: enum
+    choices:
+      - string
+      - integer
+      - boolean
+      - json
+      - select

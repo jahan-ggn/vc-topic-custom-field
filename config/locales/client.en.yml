@@ -1,9 +1,5 @@
 en:
-  admin_js:
-    admin:
-      site_settings:
-        categories:
-          vc_topic_custom_field: "Vc Topic Custom Field"
   js:
-    vc_topic_custom_field:
-      placeholder: placeholder
+    topic_custom_field:
+      label: "%{field}: %{value}"
+      placeholder: "Enter a %{field}"
