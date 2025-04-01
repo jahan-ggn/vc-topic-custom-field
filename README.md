@@ -1,4 +1,4 @@
-# **Plugin Name** Plugin
+# **Vc Topic Custom Field** Plugin
 
 **Plugin Summary**
 

@@ -3,7 +3,7 @@ en:
     admin:
       site_settings:
         categories:
-          TODO_plugin_name: "Plugin Name"
+          vc_topic_custom_field: "Vc Topic Custom Field"
   js:
-    discourse_plugin_name:
+    vc_topic_custom_field:
       placeholder: placeholder
