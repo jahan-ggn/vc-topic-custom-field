@@ -16,6 +16,10 @@ export default class TopicCustomFieldTopicTitle extends Component {
       .join(" ");
   }
 
+  get showCustomFieldLabel() {
+    return !(this.topic.editingTopic && this.topic.category_id === 6);
+  }
+
   get fieldValue() {
     return this.args.outletArgs.model.get(this.rawFieldName) || "On-Going";
   }
