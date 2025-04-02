@@ -5,7 +5,7 @@ const DealStatusHeaderCell = <template>
 </template>;
 const DealStatusItemCell = <template>
   <td>{{#if @topic.deal_status}}
-      <a href="{{@topic.lastUnreadUrl}}" data-topic-id="{{@topic.id}}">
+      <a href={{@topic.lastUnreadUrl}} data-topic-id={{@topic.id}}>
         <span>
           {{@topic.deal_status}}
         </span>
