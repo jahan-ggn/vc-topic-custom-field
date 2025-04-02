@@ -3,3 +3,4 @@ en:
     VC_topic_custom_field_enabled: Enable or disable the vc topic custom field plugin. When disabled, the custom fields inside topic won't be visible.
     VC_topic_custom_field_name: Name of your topic custom field.
     VC_topic_custom_field_type: Type of your topic custom field.
+    VC_topic_custom_field_categories: "List of category IDs where the custom topic field should be displayed."

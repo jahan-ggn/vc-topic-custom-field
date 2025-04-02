@@ -15,3 +15,7 @@ plugins:
       - boolean
       - json
       - select
+  VC_topic_custom_field_categories:
+    default: ""
+    type: category_list
+    client: true

@@ -20,16 +20,17 @@ export default class TopicCustomFieldInput extends Component {
   @readOnly("siteSettings.VC_topic_custom_field_type") fieldType;
 
   get allowedCategoryIds() {
-    return [6];
+    const categoryIds =
+      this.siteSettings.VC_topic_custom_field_categories.split("|").map(Number);
+    return categoryIds;
   }
 
   get shouldRender() {
     const composer = this.composer;
-    const categoryId =
+    const categoryIds =
       composer?.model?.category?.id || // for creation
-      composer?.topic?.category_id; // for editing
-
-    return this.allowedCategoryIds.includes(categoryId);
+      composer?.topic?.category?.id; // for editing
+    return this.allowedCategoryIds.includes(categoryIds);
   }
 
   // Options for the DSelect dropdown
