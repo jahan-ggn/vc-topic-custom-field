@@ -4,6 +4,7 @@ import { Input, Textarea } from "@ember/component";
 import { on } from "@ember/modifier";
 import { action } from "@ember/object";
 import { readOnly } from "@ember/object/computed";
+import didInsert from "@ember/render-modifiers/modifiers/did-insert";
 import { service } from "@ember/service";
 import { eq } from "truth-helpers";
 import DSelect from "discourse/components/d-select";
@@ -27,11 +28,16 @@ export default class TopicCustomFieldInput extends Component {
   }
 
   @action
-  handleSelectChange(value) {
-    this.selectedItem = value;
-    if (this.args?.onChangeField) {
-      this.args.onChangeField(value);
+  initSelect() {
+    if (!this.hasInitialized && this.selectedItem) {
+      this.hasInitialized = true;
+      this.handleSelectChange(this.selectedItem);
     }
+  }
+
+  @action
+  handleSelectChange(value) {
+    this.args.onChangeField(value);
   }
 
   <template>
@@ -89,7 +95,8 @@ export default class TopicCustomFieldInput extends Component {
         @onChange={{this.handleSelectChange}}
         class="topic-custom-field-select"
         @placeholder="Select an option"
-        @includeNone=""
+        @includeNone={{"false"}}
+        {{didInsert this.initSelect}}
         as |select|
       >
         {{#each this.options as |option|}}
