@@ -8,6 +8,7 @@ export default class TopicCustomFieldTopicTitle extends Component {
   @controller topic;
 
   @alias("siteSettings.VC_topic_custom_field_name") rawFieldName;
+  @alias("siteSettings.VC_topic_custom_field_categories") rawCategoryIds;
 
   get fieldName() {
     return this.rawFieldName
@@ -16,8 +17,13 @@ export default class TopicCustomFieldTopicTitle extends Component {
       .join(" ");
   }
 
+  get categoryIds() {
+    return this.rawCategoryIds?.split("|").map(Number) || [];
+  }
+
   get showCustomFieldLabel() {
-    return !(this.topic.editingTopic && this.topic.category_id === 6);
+    const categoryId = this.args.outletArgs.model.get("category_id");
+    return !this.topic.editingTopic && this.categoryIds.includes(categoryId);
   }
 
   get fieldValue() {
