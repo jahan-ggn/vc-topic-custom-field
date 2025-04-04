@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module ::VcTopicCustomField
+module ::VCTopicCustomField
   class Engine < ::Rails::Engine
     engine_name PLUGIN_NAME
-    isolate_namespace VcTopicCustomField
+    isolate_namespace VCTopicCustomField
     config.autoload_paths << File.join(config.root, "lib")
     scheduled_job_dir = "#{config.root}/app/jobs/scheduled"
     config.to_prepare do
