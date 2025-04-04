@@ -1,12 +1,12 @@
 plugins:
   VC_topic_custom_field_enabled:
-    default: true
+    default: false
     client: true
   VC_topic_custom_field_name:
-    default: 'deal_status'
+    default: "deal_status"
     client: true
   VC_topic_custom_field_type:
-    default: 'select'
+    default: "select"
     client: true
     type: enum
     choices:

@@ -1,4 +1,9 @@
 en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          vc_topic_custom_field: "VC Topic Custom Field"
   js:
     topic_custom_field:
       label: "%{field}: %{value}"
