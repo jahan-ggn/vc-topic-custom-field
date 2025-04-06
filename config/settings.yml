@@ -1,4 +1,4 @@
-plugins:
+vc_topic_custom_field:
   VC_topic_custom_field_enabled:
     default: false
     client: true
